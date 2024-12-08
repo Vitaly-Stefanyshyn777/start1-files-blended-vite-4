@@ -1,4 +1,4 @@
-import { Section, Container, Header, Text, Form, TodoList } from 'components';
+import { Section, Container, Header, Text, Form, TodoList, Filter } from 'components';
 import { useSelector } from 'react-redux';
 
 export const App = () => {
@@ -9,6 +9,7 @@ export const App = () => {
       <Section>
         <Container>
           <Form />
+          <Filter />
           {todos.length > 0 ? (
             <TodoList />
           ) : (
