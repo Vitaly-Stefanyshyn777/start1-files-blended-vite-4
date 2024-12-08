@@ -10,15 +10,13 @@ import { useDispatch } from 'react-redux';
 export const Form = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = values => {
-    console.log('values: ', values);
+  const handleSubmit = (values,actions) => {
     const newTodo = {
       ...values,
       id: nanoid(),
     };
-    console.log('newTodo: ', newTodo);
     dispatch(addTodo(newTodo));
-    console.log('addTodo(newTodo): ', addTodo(newTodo));
+    actions.resetForm();
   };
   return (
     <Formik onSubmit={handleSubmit} initialValues={{ text: '' }}>
