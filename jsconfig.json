@@ -6,7 +6,7 @@
       "data/*": ["data/*"],
       "helpers/*": ["helpers/*"],
       "styles/*": ["styles/*"],
-      "reduxTodo/*": ["reduxTodo/*"]
+      "reduxTodo/*": ["src/reduxTodo/*"]
     }
   },
   "include": ["src"]
